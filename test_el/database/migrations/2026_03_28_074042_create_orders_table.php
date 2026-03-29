@@ -31,7 +31,7 @@ return new class extends Migration
             $table->boolean('is_cancel');
             $table->timestamp('cancel_dt')->nullable();
 
-            $table->primary(['g_number', 'nm_id', 'date', 'barcode', 'subject']);
+            $table->primary(['g_number', 'nm_id', 'barcode', 'subject', 'income_id']);
 
         });
     }

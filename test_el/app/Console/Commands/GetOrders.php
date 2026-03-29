@@ -85,10 +85,10 @@ class GetOrders extends Command
 
                     Order::upsert(
                         $items,
-                        ['g_number', 'nm_id', 'date', 'barcode', 'subject'],
+                        ['g_number', 'nm_id', 'barcode', 'subject', 'income_id'],
                         [
-                            'last_change_date', 'supplier_article', 'tech_size', 'total_price',
-                            'discount_percent', 'warehouse_name', 'oblast', 'income_id',
+                            'date', 'last_change_date', 'supplier_article', 'tech_size', 'total_price',
+                            'discount_percent', 'warehouse_name', 'oblast',
                             'odid', 'category', 'brand', 'is_cancel', 'cancel_dt'
                         ]
                     );
